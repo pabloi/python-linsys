@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linsys"
+version = "0.1.0"
+description = "Linear dynamical systems toolbox: Kalman filtering/smoothing (covariance, information and square-root forms), EM and subspace system identification, sPCA, and discrete HMMs. Python port of matlab-linsys."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Pablo Iturralde", email = "itu.pablo@gmail.com" }]
+license = { text = "MIT" }
+dependencies = ["numpy>=1.24", "scipy>=1.10"]
+
+[project.optional-dependencies]
+viz = ["matplotlib>=3.7"]
+dev = ["pytest>=7", "matplotlib>=3.7"]
+
+[tool.setuptools.packages.find]
+include = ["linsys*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
