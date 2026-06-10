@@ -17,12 +17,17 @@ from . import stats
 from . import model_selection
 from . import misc_helpers
 from . import viz
+from . import model
 from .utils import fwd_sim, canonize
 from .stats import data_log_likelihood, logl_incomplete, logl_complete
+from .model import (LinSys, FittedLinSys, DataSet, DataFit, StateEstimate,
+                    InitCond, TrainInfo, fit_linsys)
 
 __version__ = "0.1.0"
 
 __all__ = ["utils", "kalman", "subspace", "spca", "em", "hmm", "stats",
            "model_selection", "misc_helpers", "viz", "fwd_sim", "canonize",
            "data_log_likelihood", "logl_incomplete", "logl_complete",
+           "model", "LinSys", "FittedLinSys", "DataSet", "DataFit",
+           "StateEstimate", "InitCond", "TrainInfo", "fit_linsys",
            "__version__"]
